@@ -23,9 +23,14 @@ class ChooseActivity : AppCompatActivity() {
    }
 
    fun viewDataBtnClicked (view: View) {
-       val webIntent: Intent = Uri.parse("http://3.18.110.88/").let { webpage ->
-           Intent(Intent.ACTION_VIEW, webpage)
-       }
-       startActivity(webIntent)
+
+       val webActivity = Intent(this, WebActivity::class.java)
+       startActivity(webActivity)
    }
-}
+//       val webIntent: Intent = Uri.parse("http://3.18.110.88/").let { webpage ->
+//           Intent(Intent.ACTION_VIEW, webpage)
+//       }
+//       startActivity(webIntent)
+
+
+   }
